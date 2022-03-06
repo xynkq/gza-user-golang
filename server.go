@@ -36,7 +36,6 @@ func main() {
 	}
 	r.Use()
 	r.NoRoute(func(c *gin.Context) {
-		// In gin this is how you return a JSON response
 		c.JSON(404, gin.H{"message": "Not found"})
 	})
 

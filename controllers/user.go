@@ -36,7 +36,6 @@ func GetUser(c *gin.Context) {
 		})
 		return
 	}
-	// c.JSON(http.StatusOK, user)
 	c.JSON(http.StatusOK, gin.H{
 		"status": http.StatusOK,
 		"data":   user,
@@ -96,8 +95,6 @@ func UpdateUser(c *gin.Context) {
 		return
 	}
 	db.Model(&user).Updates(&data)
-	//models.DB.Model(&info).Update("Name", "Lee")
-	//models.DB.Model(&info).Update(models.Info{Name: "Lee", Email: "rhdtha01@gmail.com"})
 	c.JSON(http.StatusOK, gin.H{
 		"status": http.StatusOK,
 		"data":   data,
